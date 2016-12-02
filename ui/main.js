@@ -1,11 +1,5 @@
-console.log('Loaded!');
-//move the image
-var img = document.getElementById('madi');
-var marginLeft = 0;
-function moveRight () {
-    marginLeft = marginLeft + 500;
-    img.style.marginLeft = marginLeft +'px';
+var name=prompt("are you ready");
+var nameString=function(name){
+	return("Hi, I am"+" "+name);
 }
-img.onclick = function(){
-    var interval = setInterval(moveRight,50); 
-};
+console.log(nameString("Deepak"));
