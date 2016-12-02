@@ -1,5 +1,17 @@
-var ans=prompt("are you ready");
-var nameString=function(name){
-	return("Hi, I am"+" "+name);
-};
-console.log(nameString("Deepak"));
+var express = require('express');
+var morgan = require('morgan');
+var path = require('path');
+
+var app = express();
+app.use(morgan('combined'));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+app.get('/ui/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+
+app.get('/ui/madi.png', function (req, res) {
+  res.s
