@@ -1,5 +1,5 @@
-var name=prompt("are you ready");
+var ans=prompt("are you ready");
 var nameString=function(name){
 	return("Hi, I am"+" "+name);
-}
+};
 console.log(nameString("Deepak"));
